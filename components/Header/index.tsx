@@ -34,7 +34,7 @@ const Header = () => {
         x: 0,
       }}
       transition={{ duration: 0.5 }}
-      className="flex items-center gap-4 py-12 md:mb-12"
+      className="flex items-center gap-4 py-12 md:mb-12 max-w-7xl"
     >
       <div className={styles.intro}>
         <span className={styles.symbol}>{">"}</span>
