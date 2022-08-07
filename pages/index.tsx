@@ -1,28 +1,29 @@
-import Container from '../components/container'
-import MoreStories from '../components/more-stories'
-import HeroPost from '../components/hero-post'
-import Intro from '../components/intro'
-import Layout from '../components/layout'
-import { getAllPosts } from '../lib/api'
-import Head from 'next/head'
-import { CMS_NAME } from '../lib/constants'
-import Post from '../interfaces/post'
+import Container from "@/components/container";
+import { HOMEPAGE_TITLE } from "@/lib/constants";
+import Head from "next/head";
+import Header from "@/components/Header";
+import HeroPost from "@/components/hero-post";
+import Layout from "@/components/Layout";
+import MoreStories from "@/components/MoreStories";
+import Post from "@/interfaces/post";
+import { ToastContainer } from "react-toastify";
+import { getAllPosts } from "@/lib/api";
 
 type Props = {
-  allPosts: Post[]
-}
+  allPosts: Post[];
+};
 
 export default function Index({ allPosts }: Props) {
-  const heroPost = allPosts[0]
-  const morePosts = allPosts.slice(1)
+  const heroPost = allPosts[0];
+  const morePosts = allPosts.slice(1);
   return (
     <>
       <Layout>
         <Head>
-          <title>Next.js Blog Example with {CMS_NAME}</title>
+          <title>{HOMEPAGE_TITLE}</title>
         </Head>
         <Container>
-          <Intro />
+          <Header />
           {heroPost && (
             <HeroPost
               title={heroPost.title}
@@ -35,22 +36,23 @@ export default function Index({ allPosts }: Props) {
           )}
           {morePosts.length > 0 && <MoreStories posts={morePosts} />}
         </Container>
+        <ToastContainer />
       </Layout>
     </>
-  )
+  );
 }
 
 export const getStaticProps = async () => {
   const allPosts = getAllPosts([
-    'title',
-    'date',
-    'slug',
-    'author',
-    'coverImage',
-    'excerpt',
-  ])
+    "title",
+    "date",
+    "slug",
+    "author",
+    "coverImage",
+    "excerpt",
+  ]);
 
   return {
     props: { allPosts },
-  }
-}
+  };
+};

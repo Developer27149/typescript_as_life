@@ -1,0 +1,40 @@
+:root {
+  --primary-bg-color-dark: #222225; /* for dark mode */
+  --second-bg-color-dark: #333; /* for dark mode */
+  --primary-text-color-dark: white; /* for dark mode */
+  --second-text-color-dark: #eee8; /* for dark mode */
+
+  --primary-text-color-light: black; /* for light mode */
+  --second-text-color-light: #333c; /* for light mode */
+  --primary-bg-color-light: white; /* for light mode */
+  --second-bg-color-light: #eee; /* for light mode */
+
+  --theme-light: #a855f7; /* for light mode */
+  --theme-dark: #518eb8; /* for dark mode */
+
+  --page-font-size: 14px;
+  --page-font-family: Avenir;
+  --page-action-btn: #c70085;
+  /* --page-font-color: var(--font-color-dark); theme color for font */
+  /* --page-background-color: var(--background-dark); theme background color*/
+}
+.dark-color {
+  color: var(--primary-text-color-dark);
+}
+.light-color {
+  color: var(--primary-text-color-light);
+}
+
+.second_text_color {
+  color: var(--second-text-color);
+}
+.primary_bg {
+  background: var(--primary-bg-color);
+}
+.primary_text {
+  color: var(--primary-text-color);
+}
+
+#nprogress .bar {
+  background: var(--theme-color) !important;
+}

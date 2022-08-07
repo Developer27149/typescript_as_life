@@ -1,0 +1,17 @@
+.intro {
+  @apply  text-xl md:text-4xl font-bold tracking-tighter leading-tight md:pr-8;
+  @apply flex items-center gap-2;
+  color: var(--theme-color)
+}
+.nav_list {
+  @apply flex items-center gap-4 font-bold opacity-80;
+  color: var(--primary-text-color);
+}
+.theme_switch {
+  @apply flex items-center p-1 rounded-full;
+  background: var(--second-text-color);
+  color: var(--second-bg-color);
+}
+.symbol {
+  color: var(--primary-text-color);
+}

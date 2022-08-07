@@ -1,0 +1,9 @@
+.footer {
+  background-color: var(--second-bg-color);
+}
+
+.title {
+  @apply text-4xl lg:text-[2.5rem] font-bold lg:text-left mb-10 lg:mb-0 lg:pr-4 lg:w-1/2;
+  @apply tracking-tighter leading-tight text-center ;
+  color: var(--primary-text-color);
+}
